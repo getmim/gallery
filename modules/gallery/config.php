@@ -2,7 +2,7 @@
 
 return [
     '__name' => 'gallery',
-    '__version' => '0.0.1',
+    '__version' => '0.1.0',
     '__git' => 'git@github.com:getmim/gallery.git',
     '__license' => 'MIT',
     '__author' => [
@@ -71,6 +71,45 @@ return [
                 ],
                 'created' => [
                     'type' => 'date'
+                ]
+            ],
+            'content-pricing' => [
+                'object' => [
+                    'cases' => [
+                        'gallery' => [
+                            'model' => [
+                                'name' => 'Gallery\\Model\\Gallery',
+                                'field' => 'id'
+                            ],
+                            'format' => 'gallery'
+                        ]
+                    ]
+                ]
+            ]
+        ]
+    ],
+    'libEnum' => [
+        'enums' => [
+            'content-pricing.type' => [
+                'gallery' => 'Gallery'
+            ]
+        ]
+    ],
+    'contentPricing' => [
+        'active' => [
+            'gallery' => true
+        ],
+        'objects' => [
+            'gallery' => [
+                'model' => 'Gallery\\Model\\Gallery',
+                'format' => 'gallery',
+                'fields' => [
+                    'id'        => 'id',
+                    'user'      => 'user',
+                    'title'     => 'title',
+                    'created'   => 'created',
+                    'published' => 'created',
+                    'status'    => '$Published'
                 ]
             ]
         ]
