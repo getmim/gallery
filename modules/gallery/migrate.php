@@ -48,7 +48,7 @@ return [
                 'index' => 6000
             ],
             'images' => [
-                'comment' => 'Ex: [{"url":"","label":""}, ...]',
+                'comment' => 'Ex: [{url,title,text,action}, ...]',
                 'type' => 'TEXT',
                 'attrs' => [],
                 'index' => 7000
