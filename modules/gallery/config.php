@@ -2,7 +2,7 @@
 
 return [
     '__name' => 'gallery',
-    '__version' => '0.1.0',
+    '__version' => '0.2.0',
     '__git' => 'git@github.com:getmim/gallery.git',
     '__license' => 'MIT',
     '__author' => [
@@ -64,13 +64,22 @@ return [
                     'type' => 'json'
                 ],
                 'images' => [
-                    'type' => 'json'
+                    'type' => 'json',
+                    'format' => 'gallery-image'
                 ],
                 'updated' => [
                     'type' => 'date'
                 ],
                 'created' => [
                     'type' => 'date'
+                ]
+            ],
+            'gallery-image' => [
+                'url' => [
+                    'type' => 'media'
+                ],
+                'label' => [
+                    'type' => 'text'
                 ]
             ],
             'content-pricing' => [
